@@ -25,7 +25,7 @@ We create a netwrok of N node which are randomly connected to have on average N_
 Now we can simulate the outbreaks and investigate how virus spread with respect to the average number of contacts per week for each person and transmission rate. Following shows how virus spreads for 
 - 1) N_c = 10 (high Social-distance) and different transmission rates T_r, 
 
-![alt text](https://github.com/mbmehran/COVID-19_MarkovMonteCarlo/master/common/Tr.gif "Logo Title Text 1")
+![alt text](https://github.com/mbmehran/COVID-19_MarkovMonteCarlo/common/Tr.gif "Logo Title Text 1")
 
 - 2) T_r = 5% (high Personal hygeine ) and different number of contact N_c
 
