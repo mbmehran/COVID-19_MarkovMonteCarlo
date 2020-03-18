@@ -26,7 +26,7 @@ Now we can simulate the outbreaks and investigate how virus spread with respect 
 
 High Social-distance (N_c = 10)<br> Various transmission rates (T_r) | High Personal hygeine(T_r = 5%)<br> Various number of contacts (N_c)
 :---------------------:|:---------------------:
-<img src="https://github.com/mbmehran/COVID-19_MarkovMonteCarlo/blob/master/common/Tr.gif" width="400" height="400" /> | <img src="https://github.com/mbmehran/COVID-19_MarkovMonteCarlo/blob/master/common/Tr.gif" width="400" height="400" />
+<img src="https://github.com/mbmehran/COVID-19_MarkovMonteCarlo/blob/master/common/Tr.gif" width="400" height="400" /> | <img src="https://github.com/mbmehran/COVID-19_MarkovMonteCarlo/blob/master/common/Nc.gif" width="400" height="400" />
 
 if we consider that society would collapse when 20% of its population get infected, above results clearly show that number of contact per week should stay less than 13 even if one can decrease transmission rate down to 5%. 
 
