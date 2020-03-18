@@ -42,7 +42,7 @@ High Social-distance (N_c = 10)<br> Various transmission rates (T_r) | High Pers
 
 Although we simulate the spread of a fake disease through a population, yet it would capture essential feature of real case. As one can see shape of the spreading curve is controlled by T_r and N_c. (N_0 only dictate when curve should occurs and does make any noticeable differences in shape of the curve; data not shown).
 
-__As a result, even if one thinks that with taking extra precautionary steps we can make the transmission rate of this contagious disease as low as 5%, he or she still should not be in close contact with more than 10-12 persons per week.__
+__As a result, even if one thinks that with taking extra precautionary steps we can make the transmission rate of this contagious disease as low as 5%, people still should not be in close contact with more than 10-12 persons per week on average.__
 
 ### This is oversimplified model:
 - Network with static connections: connections are fixed and new connections cannot be created.
