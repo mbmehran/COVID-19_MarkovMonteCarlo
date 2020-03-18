@@ -3,29 +3,29 @@ I used Markov Chain Monte Carlo (MCMC) simulation to represent how outbreaks suc
 [Simulated source code will be posted soon.]
 
 ## Simple Model:
-In the simple version of this COVID-19 outbreak simulation, we only use few parameters aiming to describe epidemic effect for general audience and raise awareness about "Social distancing" as well as "personal hygiene"; similar to Harry Steven's [work](https://www.washingtonpost.com/graphics/2020/world/corona-simulator/?fbclid=IwAR0LrA8mFe_8tZTsliPL8mBIac7qOpEuN_xAAYfTluH-GvCN8bor2pPSX5A&utm_campaign=wp_main&utm_medium=social&utm_source=facebook). Here, I tried to give readers more tangible definition/metric for the social distance and personal hygiene to avoid any underestimation during this infectious disease outbreaks. 
+In the simple version of this COVID-19 outbreak simulation, we only use few parameters aiming to describe epidemic effect for general audience and to raise awareness about "Social distancing" as well as "personal hygiene"; similar to Harry Steven's [work](https://www.washingtonpost.com/graphics/2020/world/corona-simulator/?fbclid=IwAR0LrA8mFe_8tZTsliPL8mBIac7qOpEuN_xAAYfTluH-GvCN8bor2pPSX5A&utm_campaign=wp_main&utm_medium=social&utm_source=facebook). Here, I tried to give readers more tangible definition/metrics for the social distance and personal hygiene to avoid any underestimation during this infectious disease outbreaks. 
 
-__Social distance__ would describe/control the average number of people that one person in the society would be in close contact__ either __directly__ or __indirectly__ (i.e. via a mediator object such as touching something which has been touched by the others before). In the normal situation (low social distance) when you go to work regularly, use public transit, do shopping, bars/restaurants, family/friends gathering, the __average number of contacts per week (N_c)__ can easily go beyond 100 (considering indirect contacts).
+__Social distance__ would describe/control the average number of people that one person in the society would be in close contact with __ either __directly__ or __indirectly__ (i.e. via a mediator object such as touching something which has been touched by the others before). In the normal situation (low social distance) when you go to work regularly, you use public transit, do shopping, go to bars/restaurants as well as family/friends gathering, thus, the __average number of contacts per week (N_c)__ can easily go beyond 100 (considering indirect contacts).
 
-__Personal hygiene such as hand washing and etc, describes/controls __T_r transmission rate__ odds of getting infected if you were exposed to the virus carrier (i.e. person or object containing virus). For highly contagious virus such as COVID-19 transmission rate maybe as high as 50%; however, with all warning and precautionary steps that one with high personal hygiene may takes, one can reduce it to less than 10%.
+__Personal hygiene such as hand washing and etc, would describe/control __T_r transmission rate__ odds of getting infected, if you were exposed to the virus carrier (i.e. person or object containing virus). For highly contagious virus such as COVID-19, the transmission rate could be as high as 50%; however, with all warnings and precautionary steps that one with high personal hygiene may take, one can reduce the transmission rate to less than 10%.
 
 
 ### Model Details
-Now lets take a look at parameters which describe our simulation system:
+Now lets take a look at parameters that describe our simulation system:
 - N_c : __Average number of contacts per week per person__  
 - T_r : __Transmission rate__; (odds of getting infected if you were exposed to the virus carrier)              
-_ P_t : __Period of transmission__; (During this period infected person will be in contact with others and transmit the virus ath the rate of T_r to their connections. Set to two weeks starting the infection date; similar to time which takes for the symptoms to appear in infected person. )
-- P_r : __Period of Recovery__ (Set to three weeks starting appearance of symptoms. during this period infected person is isolated for three weeks to get well and cannot transmit the virus)
-- N   : system population (Set to 1000)
+_ P_t : __Period of transmission__; (During this period, infected person will be in contact with others and transmit the virus at the rate of T_r to their connections. It is set to two weeks, starting the infection date; similar to time that takes for the symptoms to appear in infected person. )
+- P_r : __Period of Recovery__ (Set to three weeks, starting appearance of symptoms. during this period, infected person is isolated for three weeks to get well and cannot transmit the virus)
+- N   : System population (Set to 1000)
 - N_0 : Initial Number of sick people (people who are infected but not isolated at time=0; set to 5)
 - F_r : Fatality rate; probability of one cannot be recovered and die.
-- TrR  : transmitting rate after recovery, set to 2%
+- TrR  : Transmitting rate after recovery, set to 2%
 
-We create network systems of N nodes which are randomly connected in a way that members have, on average, N_c connections. Then, we randomly select N_0 of those nodes and put them into Infected mode capable of transmitting the disease. Through weekly iteration with updates the system with respects to T_r, P_t, P_r, and F_r explain above. Infected nodes have two weeks (two time step) from beginning of their infection to transmit the virus with the rate/probability of T_r to their connections. After two weeks infected nodes are isolated for three weeks to recover. They may die with fatality rate of F_r. If they survive, they will get back into healthy population but their transmitting rate reduce to 2%. 20 different network system are created and average results and corresponding std are reported below.
+We create network systems of N nodes which are randomly connected in a way that members have, on average, N_c connections. Then, we randomly select N_0 of those nodes and put them into Infected mode capable of transmitting the disease. Through weekly iterations, we update the system with respect to T_r, P_t, P_r, and F_r, explained above. Infected nodes have two weeks (two time-steps) from beginning of their infection to transmit the virus with the rate/probability of T_r to their connections. After two weeks infected nodes are isolated for three weeks to recover. They may die with fatality rate of F_r. If they survive, they will get back into healthy population but their transmitting rate reduce to 2%. 20 different network systems are created and average results and corresponding std are reported below.
 
  
 ### Results
-Now we can simulate the outbreaks and investigate how the virus spread with respect to the average number of contacts per week for netwroks members and disease transmission rate. Note that in any circumstances, people still need to do grocery shopping and not everyone is able to work from home. 
+Now we can simulate the outbreaks and investigate how the virus spread with respect to "the average number of contacts per week for netwroks members" and "disease transmission rate". Note that in any circumstances, people still need to do grocery shopping and not everyone is able to work from home (N_c >= 1). 
 
 High Social-distance (N_c = 10)<br> Various transmission rates (T_r) | High Personal hygeine(T_r = 5%)<br> Various number of contacts (N_c)
 :---------------------:|:---------------------:
@@ -33,11 +33,11 @@ High Social-distance (N_c = 10)<br> Various transmission rates (T_r) | High Pers
 
 
 ### This is oversimplified model yet :
-- Network with static connections: connections are fixed and new connection cannot be created.
+- Network with static connections: connections are fixed and new connections cannot be created.
 - no limit in number of people in self-isolation
 - no limit in number of people under recovery (unlimited capacity for healthcare system)  
 - ...
 
 #### Disclaimer: 
-Please note that our model is a rough/oversimplified representation of such outbreak and to draw any solid conclusion and measurements for policy maker more sophisticated model is needed. However, our model able shows critical feature of infectious disease outbreaks such as covid-19.
+Please note that our model is a rough/oversimplified representation of such outbreak and to draw any solid conclusion and measurements for policy makers, a more sophisticated model is needed. However, our model is able to show critical features of infectious disease outbreaks such as covid-19.
 
