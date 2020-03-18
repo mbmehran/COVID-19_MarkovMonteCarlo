@@ -25,7 +25,7 @@ We create network systems of N nodes which are randomly connected in a way that 
 
  
 ### Results
-Now we can simulate the outbreaks and investigate how the virus spread with respect to "the average number of contacts per week for netwroks members" and "disease transmission rate". Note that in any circumstances, people still need to do grocery shopping and not everyone is able to work from home (N_c >= 1). 
+Now we can simulate the outbreaks and investigate the spreading curve of disease with respect to "the average number of contacts per week for netwroks members" and "disease transmission rate". Note that in any circumstances, people still need to do grocery shopping and not everyone is able to work from home (N_c >= 1).  Let's flatten the cure
 
 High Social-distance (N_c = 10)<br> Various transmission rates (T_r) | High Personal hygeine(T_r = 5%)<br> Various number of contacts (N_c)
 :---------------------:|:---------------------:
