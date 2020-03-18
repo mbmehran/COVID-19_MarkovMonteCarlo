@@ -7,7 +7,7 @@ In the simple version of this COVID-19 outbreak simulation, we only use few para
 
 __Social distance__ would describe/control the average number of people that one person in the society would be in close contact with __ either __directly__ or __indirectly__ (i.e. via a mediator object such as touching something which has been touched by the others before). In the normal situation (low social distance) when you go to work regularly, you use public transit, do shopping, go to bars/restaurants as well as family/friends gathering, thus, the __average number of contacts per week (N_c)__ can easily go beyond 100 (considering indirect contacts).
 
-__Personal hygiene_ such as hand washing and etc, would describe/control __T_r transmission rate__ odds of getting infected, if you were exposed to the virus carrier (i.e. person or object containing virus). For highly contagious virus such as COVID-19, the transmission rate could be as high as 50%; however, with all warnings and precautionary steps that one with high personal hygiene may take, one can reduce the transmission rate to less than 10%.
+__Personal hygiene__ such as hand washing and etc, would describe/control __T_r transmission rate__ odds of getting infected, if you were exposed to the virus carrier (i.e. person or object containing virus). For highly contagious virus such as COVID-19, the transmission rate could be as high as 50%; however, with all warnings and precautionary steps that one with high personal hygiene may take, one can reduce the transmission rate to less than 10%.
 
 
 ### Model Details
