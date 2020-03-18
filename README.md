@@ -12,18 +12,18 @@ __Personal hygiene such as hand washing, describes/controls __T_r (transmission 
 ### Model Details
 Here are parameters considered to describe the system:
 - N_c : __Average number of contacts per week per person__  
-- T_r : __Transmission rate__ (odds of getting infected if you were exposed to the virus carrier)              
-_ P_t : Transmitting period; time which takes for the symptoms to appear in infected person (Set to two weeks starting the infection day. During this period infected person will be in contact with others and enable transmitting the virus with the rate of T_r)
-- P_r : Recovery period (Set to three weeks starting appearance of symptoms. during this period infected person is isolated for three weeks to get well and cannot transmit the virus)
-- N   : system population (set to 1000)
+- T_r : __Transmission rate__; (odds of getting infected if you were exposed to the virus carrier)              
+_ P_t : __Period of transmission__; (Set to two weeks starting the infection date; similar to time which takes for the symptoms to appear in infected person. During this period infected person will be in contact with others and transmit the virus with the rate of T_r to their connections)
+- P_r : __Period of Recovery__ (Set to three weeks starting appearance of symptoms. during this period infected person is isolated for three weeks to get well and cannot transmit the virus)
+- N   : system population (Set to 1000)
 - N_0 : Initial Number of sick people (people who are infected but not isolated at time=0; set to 5)
 - F_r : Fatality rate; probability of one cannot be recovered and die.
 
-We create a netwrok of N node which are randomly connected to have on average N_c connections. Then, randomly select N_0 of those nodes and enable them for tranmiting the virus. Through weekly iteration with updates the system with respects to T_r, P_t, P_r, and F_r explain above. Infected nodes have two weeks (two time step) from begining of their infection to transmit the virus with the rate/probability of T_r to their connections. After two weeks infected noded isolated for three weeks and not able to transmit the virus. They may die with rate/probability of F_r or recover and get back to healthy population. We randomly desine and simulated 20 different systems and average value(line) and correponding std(shadow) are reported as results.
+We create a netwrok of N node which are randomly connected to have on average N_c connections. Then, randomly select N_0 of those nodes and enable them for tranmiting the virus. Through weekly iteration with updates the system with respects to T_r, P_t, P_r, and F_r explain above. Infected nodes have two weeks (two time step) from begining of their infection to transmit the virus with the rate/probability of T_r to their connections. After two weeks infected noded isolated for three weeks and not able to transmit the virus. They may die with fatality rate of F_r or recover and get back to healthy population but their transmitting rate reduce to 2%. We 20 different netwrok system are randomly created the network system and corresponding mean and std(shadow) are reported as results.
 
-Note that in any circumstances, people still need to do grocery shopping and not everyone is able to work from home. 
+ 
 ### Results
-Now we can simulate the outbreaks and investigate how virus spread with respect to the average number of contacts per week for each person and transmission rate. Following shows how virus spreads when one variable is in its most optimum possible value and the other varies.
+Now we can simulate the outbreaks and investigate how virus spread with respect to the average number of contacts per week for each person and transmission rate. Following shows how virus spreads when one variable is in its most optimum possible value and the other varies. Note that in any circumstances, people still need to do grocery shopping and not everyone is able to work from home. So I approximate average number of contact for a society N_c = 10 as high social distance. 
 
 High Social-distance (N_c = 10)<br> Various transmission rates (T_r) | High Personal hygeine(T_r = 5%)<br> Various number of contacts (N_c)
 :---------------------:|:---------------------:
