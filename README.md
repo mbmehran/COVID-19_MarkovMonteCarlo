@@ -34,7 +34,7 @@ High Social-distance (N_c = 10)<br> Various transmission rates (T_r) | High Pers
 <img src="https://github.com/mbmehran/COVID-19_MarkovMonteCarlo/blob/master/common/Tr3.gif" width="400" height="400" /> | <img src="https://github.com/mbmehran/COVID-19_MarkovMonteCarlo/blob/master/common/Nc3.gif" width="400" height="400" />
 
 
-### This is oversimplified model yet :
+### This is oversimplified model:
 - Network with static connections: connections are fixed and new connections cannot be created.
 - no limit in number of people in self-isolation
 - no limit in number of people under recovery (unlimited capacity for healthcare system)  
