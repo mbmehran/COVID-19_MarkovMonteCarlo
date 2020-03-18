@@ -31,7 +31,7 @@ __Let's flatten the cure__
 
 High Social-distance (N_c = 10)<br> Various transmission rates (T_r) | High Personal hygeine(T_r = 5%)<br> Various number of contacts (N_c)
 :---------------------:|:---------------------:
-<img src="https://github.com/mbmehran/COVID-19_MarkovMonteCarlo/blob/master/common/Tr3.gif" width="400" height="400" /> | <img src="https://github.com/mbmehran/COVID-19_MarkovMonteCarlo/blob/master/common/Nc3.gif" width="400" height="400" />
+<img src="https://github.com/mbmehran/COVID-19_MarkovMonteCarlo/blob/master/common/Tr4.gif" width="400" height="400" /> | <img src="https://github.com/mbmehran/COVID-19_MarkovMonteCarlo/blob/master/common/Nc4.gif" width="400" height="400" />
 
 
 ### This is oversimplified model:
