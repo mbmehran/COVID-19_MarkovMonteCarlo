@@ -1,6 +1,6 @@
 # COVID-19_MonteCarlo
 I used Markov Chain Monte Carlo (MCMC) simulation to represent how outbreaks such as the COVID-19 epidemic can spread.
-[Simulated source code will be posted soon.]
+[Simulated source code will be posted soon]
 
 ## Simple Model:
 In the simple version of this COVID-19 outbreak simulation, we only use few parameters aiming to describe epidemic effect for general audience and to raise awareness about "Social distancing" as well as "personal hygiene"; similar to Harry Steven's [work](https://www.washingtonpost.com/graphics/2020/world/corona-simulator/?fbclid=IwAR0LrA8mFe_8tZTsliPL8mBIac7qOpEuN_xAAYfTluH-GvCN8bor2pPSX5A&utm_campaign=wp_main&utm_medium=social&utm_source=facebook). Here, I tried to give readers more tangible definition/metrics for the social distance and personal hygiene to avoid any underestimation during this infectious disease outbreaks. 
