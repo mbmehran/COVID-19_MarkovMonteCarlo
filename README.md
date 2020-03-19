@@ -1,9 +1,9 @@
 # COVID-19_MonteCarlo
-I used Markov Chain Monte Carlo (MCMC) simulation to represent how outbreaks such as the COVID-19 epidemic can spread.
+I used Markov Chain Monte Carlo (MCMC) method to simulate the spread of a fake disease through a society, depending on disease "Transmission rate" and "Average number of contact per week" for members of the society.
 [Simulated source code will be posted soon]
 
 ## Simple Model:
-In the simple version of this COVID-19 outbreak simulation, we only use few parameters aiming to describe epidemic effect for general audience and to raise awareness about "Social distancing" as well as "personal hygiene"; similar to Harry Steven's [work](https://www.washingtonpost.com/graphics/2020/world/corona-simulator/?fbclid=IwAR0LrA8mFe_8tZTsliPL8mBIac7qOpEuN_xAAYfTluH-GvCN8bor2pPSX5A&utm_campaign=wp_main&utm_medium=social&utm_source=facebook). Here, I tried to give readers more tangible definition/metrics for the social distance and personal hygiene to avoid any underestimation during this infectious disease outbreaks. 
+In the simple version of this COVID-19 outbreak simulation, we only use few parameters aiming to describe epidemic effect for general audience and to raise awareness about "Social distancing" as well as "personal hygiene"; similar to Harry Steven's [work](https://www.washingtonpost.com/graphics/2020/world/corona-simulator/?fbclid=IwAR0LrA8mFe_8tZTsliPL8mBIac7qOpEuN_xAAYfTluH-GvCN8bor2pPSX5A&utm_campaign=wp_main&utm_medium=social&utm_source=facebook). Here, I tried to give readers more tangible definition/metrics for the social distance and personal hygiene to avoid any underestimation during this infectious disease outbreaks.
 
 __Social distance__ would describe/control the average number of people that one person in the society would be in close contact with __ either __directly__ or __indirectly__ (i.e. via a mediator object such as touching something which has been touched by the others before). In the normal situation (low social distance) when you go to work regularly, you use public transit, do shopping, go to bars/restaurants as well as family/friends gathering, thus, the __average number of contacts per week (N_c)__ can easily go beyond 100 (considering indirect contacts).
 
@@ -16,7 +16,7 @@ Here, we assume
  1) Infected members can transmit the virus, with respect to the given transmission rate, to their healthy connections within a first two weeks (latent stage)
  2) After two weeks, the infected person will be isolated (not transmitting) for three weeks to recover.  
  3) Not every one would survive and odds of failure in recovery (death) is 2%.
- 4) If survived, recovered members will get back into healthy population but their transmitting rate reduces to 2%.
+ 4) If survived, recovered members will get back into healthy population but their transmitting rate reduces to 1%.
 
 Here are simulation parameters:
 - N_c : __Average number of contacts per week per person__  
@@ -26,7 +26,7 @@ Here are simulation parameters:
 - N   : System population (Set to 1000)
 - N_0 : Initial Number of sick people (people who are infected but not isolated at time=0; set to 5)
 - F_r : Fatality rate; probability of one cannot be recovered and die.
-- TrR : Transmitting rate after recovery, set to 2%
+- TrR : Transmitting rate after recovery, set to 1%
 
 We create network systems of N nodes which are randomly connected in a way that members have, on average, N_c connections. Then, we randomly select N_0 of those nodes and put them into Infected mode capable of transmitting the disease. Through weekly iterations, we update the system with respect to T_r, TrR, P_t, P_r, and F_r, explained above. Infected nodes have two weeks (two time-steps) from beginning of their infection to transmit the virus with the rate/probability of T_r to their connections. After two weeks infected nodes are isolated for three weeks to recover. They may die with fatality rate of F_r. If they survive, they will get back into healthy population but their transmitting rate reduce to TrR. 20 different network systems are created and average results and corresponding STD are reported below.
 
