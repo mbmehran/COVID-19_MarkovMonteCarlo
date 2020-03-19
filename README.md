@@ -38,7 +38,7 @@ __Let's flatten the cure__
  
 High Social-distance (N_c = 10)<br> Various transmission rates (T_r) | High Personal hygeine(T_r = 5%)<br> Various number of contacts (N_c)
 :---------------------:|:---------------------:
-<img src="https://github.com/mbmehran/COVID-19_MarkovMonteCarlo/blob/master/common/Tr4.gif" width="400" height="400" /> | <img src="https://github.com/mbmehran/COVID-19_MarkovMonteCarlo/blob/master/common/Nc4.gif" width="400" height="400" />
+<img src="https://github.com/mbmehran/COVID-19_MarkovMonteCarlo/blob/master/common/Tr5.gif" width="400" height="400" /> | <img src="https://github.com/mbmehran/COVID-19_MarkovMonteCarlo/blob/master/common/Nc5.gif" width="400" height="400" />
 
 Although we simulate the spread of a fake disease through a population, yet it would capture essential feature of real case. As one can see shape of the spreading curve is controlled by T_r and N_c. (N_0 only dictate when curve should occurs and does make any noticeable differences in shape of the curve; data not shown).
 
