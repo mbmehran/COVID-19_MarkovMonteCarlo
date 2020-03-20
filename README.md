@@ -32,7 +32,7 @@ We create network systems of N nodes which are randomly connected in a way that 
 
  
 ### Results
-Now we can simulate the outbreaks and investigate the spreading curve of disease with respect to "the average number of contacts per week for netwroks members" and "disease transmission rate". Note that in any circumstances, people still need to do grocery shopping and not everyone is able to work from home (N_c >= 1).  
+Following figures show spreading curve of such fake disease with respect to "the average number of contacts per week for netwroks members" and "disease transmission rate". Note that in any circumstances, people still need to do grocery shopping and not everyone is able to work from home (N_c >= 1).  
 
 __Let's flatten the cure__
  
@@ -40,7 +40,7 @@ High Social-distance (N_c = 10)<br> Various transmission rates (T_r) | High Pers
 :---------------------:|:---------------------:
 <img src="https://github.com/mbmehran/COVID-19_MarkovMonteCarlo/blob/master/common/Tr5.gif" width="400" height="400" /> | <img src="https://github.com/mbmehran/COVID-19_MarkovMonteCarlo/blob/master/common/Nc5.gif" width="400" height="400" />
 
-Although we simulate the spread of a fake disease through a population, yet it would capture essential feature of real case. As one can see shape of the spreading curve is controlled by T_r and N_c. (N_0 only dictate when curve should occurs and does make any noticeable differences in shape of the curve; data not shown).
+Although we simulate the spread of a fake disease through a society, yet it would capture essential feature of real case. As one can see shape of the spreading curve is controlled by T_r and N_c. (N_0 only dictate when curve should occurs and does make any noticeable differences in shape of the curve; data not shown).
 
 __As a result, even if one thinks that with taking extra precautionary steps we can make the transmission rate of this contagious disease as low as 5%, people still should not be in close contact with more than 10-12 persons per week on average.__
 
